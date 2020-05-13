@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<h1 class = "text-center pt-4">Welcome to the Blog Section</h1>
+  <div class = "row">
+    <div class = "col-9">
+    </div>
+    <div class = "col-3">
+      <a href="{% url 'create' %}"> <img src = "{% static 'createlogo.jpg' %}" height="50" width="50" /> Write your own Blog </a>
+    </div>
+    </div> 
+      <h2> Latest posts </h2>
+      <hr />
+      {% for blog in blogs.all %}
+    <p> 
+      <a href="{% url 'detail' blog.id %}"> <h3> {{ blog.title }} </h3> </a>
+      <span style="padding-left: 50px;"> <i> {{ blog.pub_date }}</i> </span> <br> 
+      <br> <img  src = "{{ blog.image.url }}" height="300">
+      <br> {{ blog.summary }}
+      <br>-------------------------------------------------------------------------------------------------------
+    </p>
+    {% endfor %}
+{% endblock %}

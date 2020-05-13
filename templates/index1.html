@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Foodie - The Food Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+    <div class = "row">
+    <div class = "col-3">		
+      <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+    </div> 	
+    <div class = "col-3">
+      <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog<span class="sr-only"></span></a>
+    </div>
+    <div class = "col-3">  
+      <a class="nav-item nav-link" href="{% url 'allrecipees' %}">Recipes</a>
+    </div>
+     <div class = "col-3">  
+      <a class="nav-item nav-link" href="{% url 'app' %}">Recipe Videos</a>
+    </div>
+      {% if user.is_authenticated %}
+      <div class = "col-3">
+      <a class="nav-item nav-link" href="{% url 'create' %}"><span class="oi oi-plus"></span></a>
+      </div>
+      <div class = "col-3">
+      <a class="nav-item nav-link" href="javascript: {document.getElementById('logout').submit()}">Logout</a>
+      <form id ="logout" method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <input type="hidden" />
+      </form>
+      <h3> Hello {{ user.username }} </h3>
+  </div>
+      {% else %}
+      <div class = "col-3">
+      <a class="nav-item nav-link" href="{% url 'signup' %}">Sign up</a>
+      </div>
+      <div class = "col-3">
+      <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+      </div>
+  </div>
+      {% endif %}
+    </div>
+  </div>
+</nav> 
+
+				<!-- Header -->
+					<header id="header">
+						<span class="avatar"><img src="{% static 'images/avatar.png' %}" alt="" /></span>
+						<h1>This is <strong>foodie</strong>, a food blogging website</h1>
+						<ul class="icons">
+							<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+							<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+						</ul>
+					</header>
+
+				<!-- Main -->
+					<section id="main">
+
+						<!-- Thumbnails -->
+							<section class="thumbnails">
+								<div>
+									<a href="{% static 'images/images/01.jpg' %}">
+										<img src="{% static 'images/images/01.jpg' %}" alt="" />
+										<h3>The best American Burger in Bangalore! Hog at Truffles!</h3>
+									</a>
+									<a href="{% static 'images/images/02.jpg' %}">
+										<img src="{% static 'images/images/02.jpg' %}" alt="" />
+										<h3>The Best Italian Pizza I ever had!!</h3>
+									</a>
+								</div>
+								<div>
+									<a href="{% static 'images/images/03.jpg' %}">
+										<img src="{% static 'images/images/03.jpg' %}" alt="" />
+										<h3>Oooooh Ice Cream Cake! Now in Bangalore!! Have it at Baskin Robbins, Orion Mall</h3>
+									</a>
+									<a href="{% static 'images/fulls/04.jpg' %}">
+										<img src="{% static 'images/images/04.jpg' %}" alt="" />
+										<h3>Death By Chocolate cake - Feels like heaven. Enjoy it at Truffles, MG Road</h3>
+									</a>
+									<a href="{% static 'images/images/05.jpg' %}">
+										<img src="{% static 'images/images/05.jpg' %}" alt="" />
+										<h3>Ice Cream Taco! Its a thing now!!!!!</h3>
+									</a>
+								</div>
+								<div>
+									<a href="{% static 'images/images/06.jpg' %}">
+										<img src="{% static 'images/images/06.jpg' %}" alt="" />
+										<h3>The melting Ice Cream Sizzler - A true delight!!!!</h3>
+									</a>
+									<a href="{% static 'images/images/07.jpg' %}">
+										<img src="{%static 'images/images/07.jpg' %}" alt="" />
+										<h3>Pasta Arabiata - Krazy Folds Restuarent, Jayanagar</h3>
+									</a>
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p>&copy; Web Frameworks Project. All rights reserved @ {% now "Y" %}</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.poptrox.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if error %}
+{{ error }}
+{% endif %}
+
+<h1> Contribute your recipe! </h1>
+<form method="POST" action="{% url 'createrecipe' %}" enctype="multipart/form-data">
+{% csrf_token %}
+	Title: <br>
+	<input type="text" name="recipetitle" />
+	<br>
+	Recipe: <br>
+	<input type="textbox" name="recipebody" style = "height: 200px; width: 600px;"/>
+	<br>
+	Image:
+	<br>
+	<input type="file" name="recipeimage">
+	<br>
+	<br>
+	<input class="btn btn-primary" type="submit" value="Submit">
+</form>
+<br>
+<br>
+
+
+
+
+{% endblock %}

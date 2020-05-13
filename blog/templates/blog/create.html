@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if error %}
+{{ error }}
+{% endif %}
+
+<h1> Create Blog! </h1>
+<form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+{% csrf_token %}
+	Title: <br>
+	<input type="text" name="title" />
+	<br>
+	Blog content: <br>
+	<input type="textbox" name="body" style = "height: 200px; width: 600px;"/>
+	<br>
+	Image:
+	<br>
+	<input type="file" name="image">
+	<br>
+	<br>
+	<input class="btn btn-primary" type="submit" value="Submit">
+</form>
+<br>
+<br>
+
+
+
+
+{% endblock %}

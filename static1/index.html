@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Food Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<span class="avatar"><img src="{% static 'images/avatar.png' %}" alt="" /></span>
+						<h1>This is <strong>foodie</strong>, a food blogging website</h1>
+						<ul class="icons">
+							<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+							<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+						</ul>
+					</header>
+
+				<!-- Main -->
+					<section id="main">
+
+						<!-- Thumbnails -->
+							<section class="thumbnails">
+								<div>
+									<a href="images/images/01.jpg">
+										<img src="{% static 'images/images/01.jpg' %}" alt="" />
+										<h3>The best American Burger in Bangalore!</h3>
+									</a>
+									<a href="images/images/02.jpg">
+										<img src="{% static 'images/images/02.jpg' %}" alt="" />
+										<h3>The Best Italian Pizza I ever had!!</h3>
+									</a>
+								</div>
+								<div>
+									<a href="images/images/03.jpg">
+										<img src="{% static 'images/images/03.jpg' %}" alt="" />
+										<h3>Oooooh Ice Cream Cake! Now in Bangalore!!</h3>
+									</a>
+									<a href="images/fulls/04.jpg">
+										<img src="{% static 'images/images/04.jpg' %}" alt="" />
+										<h3>Death By Chocolate cake - Feels like heaven</h3>
+									</a>
+									<a href="images/images/05.jpg">
+										<img src="{% static 'images/images/05.jpg' %}" alt="" />
+										<h3>Ice Cream Taco! Its a thing now!!!!!</h3>
+									</a>
+								</div>
+								<div>
+									<a href="images/images/06.jpg">
+										<img src="{% static 'images/images/06.jpg' %}" alt="" />
+										<h3>The melting Ice Cream Sizzler - A true delight!!!!</h3>
+									</a>
+									<a href="images/images/07.jpg">
+										<img src="{%static 'images/images/07.jpg' %}" alt="" />
+										<h3>Pasta Arabiata - Krazy Folds Restuarent, Jayanagar - A VERY SPECIAL PLACE FOR US!!</h3>
+									</a>
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p>&copy; Untitled. All rights reserved</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.poptrox.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+	</body>
+</html>

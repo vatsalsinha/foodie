@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+ <h1 class = "text-center pt-4">Welcome to the Recipes Section</h1>
+  <div class = "row">
+    <div class = "col-9">
+    </div>
+    <div class = "col-3">
+      <a href="{% url 'createrecipe' %}"> <img src = "{% static 'createlogo.jpg' %}" height="50" width="50" /> Contribute your own recipe</a>
+    </div>
+  </div>
+      <h2> Latest Recipes </h2>
+      <hr />
+      {% for recipe in recipee.all %}
+    <p> 
+      <a href="{% url 'recipeedetail' recipe.id %}"> <h3> {{ recipe.recipee_title }} </h3> </a>
+      <span style="padding-left: 50px;"> <i> {{ recipe.recipee_pubdate }}</i> </span> <br> 
+      <br> <img  src = "{{ recipe.recipee_image.url }}" height="300">
+      <br>-------------------------------------------------------------------------------------------------------
+    </p>
+    {% endfor %}
+{% endblock %}
