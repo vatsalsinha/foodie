@@ -10,4 +10,6 @@ python manage.py migrate
 
 npm run build
 
+on the browser, go to http://127.0.0.1:8000
+
 If it doesn't work, make sure you have django and reactJS installed on your computer
