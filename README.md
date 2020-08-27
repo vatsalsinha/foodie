@@ -1,5 +1,7 @@
 # foodie
 
+foodie is a food blogging website. 
+
 Just download the project
 
 on your terminal/cmd prompt, go to the root folder and type:
