@@ -1,6 +1,6 @@
 # foodie
 
-<img src = "https://drive.google.com/file/d/1zupgveryBaV0S8SyRqiRlEA-zLCzu_ie/view?usp=sharing" />
+<img src = "http://drive.google.com/uc?export=view&id=1zupgveryBaV0S8SyRqiRlEA-zLCzu_ie" />
 
 foodie is a food blogging website. 
 
